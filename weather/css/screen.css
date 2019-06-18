@@ -49,6 +49,38 @@
     background-color:#0e89d5;
    
 }  
+#dial {
+    height: 150px;
+    width: 150px;
+    background: no-repeat center/85% url('/weather/images/wind-pointer.png');
+    z-index: 100;
+    margin: -.6em auto 0;
+
+}
+.n{
+transform: rotate(0deg)
+}
+.ne{
+transform: rotate(45deg)
+}
+.e{
+    transform: rotate(90deg)
+}
+.se{
+    transform: rotate(135deg)
+}
+.s{
+    transform: rotate(180deg)
+}
+.sw{
+    transform: rotate(225deg)
+}
+.w{
+    transform: rotate(270deg)
+    }
+.nw{
+    transform: rotate(315deg)
+}  
 
 .containers {border:2px solid black}
 #dial {
@@ -103,7 +135,7 @@
 
 }
 #bg-image{
-background-image: url("../images/rain.jpg");
+/* background-image: url("../images/rain_large.jpg"); */
 background-size: cover;
 
 }
@@ -162,17 +194,43 @@ footer{
     overflow: scroll;
 }
 #copyrite{margin-top: 5px;}
+#curWeather {
+    background-size: cover;
+   }
+   
+   /* Background pictures for summary */
+   .clear {
+    background-image: url("/weather/images/clear_small.jpg");
+   }
+   .rain {
+    background-image: url("/weather/images/rain_small.jpg");
+   }
+   .snow {
+    background-image: url("/weather/images/snow_small.jpg");
+   }
+   .fog {
+    background-image: url("/weather/images/fog_small.jpg");
+   }
+   .clouds {
+    background-image: url("/weather/images/clouds_small.jpg");
+   }
+
+
+
+
+
  
 @media screen and (min-width: 760px) {
     #bg-image{
         display:flex;
+        
         }
 
                .text{
                    font-size: 46px;
                 }
                #tem1 {font-size: 130px;}
-            .containers{width: 325px;}
+            .containers{width: 33%;}
             #page-nav {
                 background-color: #0e89d5;
                 position: fixed;
@@ -184,7 +242,22 @@ footer{
                 font-size: 47px;
                 margin: 38px;
             }
-           
+            /* Background pictures for summary */
+   .clear {
+    background-image: url("/weather/images/clear_large.jpg");
+   }
+   .rain {
+    background-image: url("/weather/images/rain_large.jpg");
+   }
+   .snow {
+    background-image: url("/weather/images/snow_large.jpg");
+   }
+   .fog {
+    background-image: url("/weather/images/fog_large.jpg");
+   }
+   .clouds {
+    background-image: url("/weather/images/clouds_large.jpg");
+   }
 }
 
 

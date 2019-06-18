@@ -7,8 +7,20 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Franklin, ID | Weather Site</title>
     <link rel="stylesheet" type="text/css" href="/weather/css/screen.css" media="screen">
-    <meta content ="width=device-width, initial-scaled=1" name="viewport" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
 
 <body>
 
@@ -35,7 +47,7 @@
                 <dd><span id="zip">83237</span>m/ft|</dd>
                 </dt>
                 <dt><b>Elevation:</b>
-                <dd><span id="elevation">1514.246ft</span> m/ft|</dd>
+                <dd><span id="elevation">1514.246</span> m/ft|</dd>
                 </dt>
                 <dt><b>Location:</b>
                 <dd><span id="location">42.07N,111.79W</span>m/ft|</dd>
@@ -44,7 +56,7 @@
 
         </section>
 
-        <div id="bg-image">
+        <div class = "bg-images" id="bg-image">
 
             <section id="temperature" class="containers">
                 <p class="text">Temperature</p>
@@ -58,14 +70,20 @@
             <section id="wind" class="containers">
                 <p class="text">Wind</p>
                 <p id="ivalue">2mph</p>
-                <img src="./images/wind-pointer.png" alt="wind-pointer">
+                <!-- <img id = "dial" class= "ne" src="./images/wind-pointer.png" alt="wind-pointer"> -->
+                <div id="dial" class="ne"></div>
                 <p><b>direction:</b><span id="wind-direction">SW</span>></p>
                 <p><b>Gust:</b><span id="gust-speed">10-12 </span>mph</p>
 
             </section>
             <section id="condition" class="containers">
                 <h2 class="text">Clear</h2>
-                <img src="./images/rain.jpg" alt="rain">
+                <picture>
+                    <source srcset="./images/rain_large.jpg" media="(min-width: 750px)">
+                    <source srcset="./images/rain_small.jpg" media="(max-width: 750px)">
+                    <img src="./images/rain.jpg" alt="Picture of ruins">
+                </picture>    
+                
             </section>
 
 

@@ -8,8 +8,11 @@ console.log('My javascript is being read.');
 //these are variables for function use.
 const temp = 31;
 const speed = 5;
+const condition ="clear";
 buildWC(speed, temp);
 
+const direction = "sW";
+windDial(direction);
 
 function buildWC(speed, temp) {
  const feelTemp = document.getElementById('feelTemp');
@@ -30,8 +33,6 @@ function buildWC(speed, temp) {
  feelTemp.innerHTML = wc;
  }
 
- const direction = "NNW"; //Set your own value
- windDial(direction);
 
 // Wind Dial Function
 function windDial(direction){
@@ -39,7 +40,7 @@ function windDial(direction){
     const dial = document.getElementById("dial");
     console.log(direction);
     // Determine the dial class
-    switch (direction){
+    switch (direction.toUpperCase()){
      case "North":
      case "N":
       dial.setAttribute("class", "n"); //"n" is the CSS rule selector
@@ -79,4 +80,74 @@ function windDial(direction){
     }
    }
    
+   function getCondition(condition)  {
+      console.log(condition)
+      if(condition.includes("rain")) {
+          return "rain";
+      }
+
+      if(condition.includes("clear")){
+        return "clear";
+      }
+      if(condition.includes("snow")){
+        return "snow";}
+
+      if(condition.includes("fog")){
+          return "fog";
+        }
+        if(condition.includes("clouds")){
+          return "clouds";
+        }
+      
+      
+
+   }
+
+  const newcondition = getCondition(condition);
+  console.log(newcondition);
+  ChangeSummaryImage(newcondition);
+
+  function ChangeSummaryImage(newcondition){
+    const image = document.getElementById("bg-image");
+
+    switch (newcondition) {
+  case "rain":
+    image.setAttribute("class", "rain");
+    break;
+  case "snow":
+    image.setAttribute("class", "snow");
+    break;
+  case "clear":
+    image.setAttribute("class", "clear");
+    break;
+  case "fog":
+    image.setAttribute("class", "fog");
+      break;
+  case "clouds":
+    image.setAttribute("class", "clouds");
+      break;
+  
+       
+     
+}
+ var elevation = document.getElementById("elevation");
+ 
+ console.log(elevation);
+ 
+
+  function convertMetersToFeet(meter){
+   let feet = meter*3.281;
+   feet= Math.floor(feet);
+   console.log(feet)
+   return feet;
+   
+
+  }
+
+  elevation.innerHTML = convertMetersToFeet(elevation.innerHTML);
+
+
+    
+    
+}
 
