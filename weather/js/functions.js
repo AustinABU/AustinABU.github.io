@@ -6,16 +6,16 @@ console.log('My javascript is being read.');
 //this function will calculate a windchill temperature.
 
 //these are variables for function use.
-const temp = 31;
-const speed = 5;
-const condition ="clear";
+let temp = 31;
+let speed = 5;
+let condition ="clear";
 buildWC(speed, temp);
 
-const direction = "sW";
+let direction = "sW";
 windDial(direction);
 
 function buildWC(speed, temp) {
- const feelTemp = document.getElementById('feelTemp');
+ let feelTemp = document.getElementById('feelTemp');
 
  // Compute the windchill
  let wc = 35.74 + 0.6215 * temp - 35.75 * Math.pow(speed, 0.16) + 0.4275 * temp * Math.pow(speed, 0.16);
@@ -37,7 +37,7 @@ function buildWC(speed, temp) {
 // Wind Dial Function
 function windDial(direction){
     // Get the container
-    const dial = document.getElementById("dial");
+    let dial = document.getElementById("dial");
     console.log(direction);
     // Determine the dial class
     switch (direction.toUpperCase()){
@@ -103,12 +103,12 @@ function windDial(direction){
 
    }
 
-  const newcondition = getCondition(condition);
+  let newcondition = getCondition(condition);
   console.log(newcondition);
   ChangeSummaryImage(newcondition);
 
   function ChangeSummaryImage(newcondition){
-    const image = document.getElementById("bg-image");
+    let image = document.getElementById("bg-image");
 
     switch (newcondition) {
   case "rain":
