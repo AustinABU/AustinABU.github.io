@@ -8,7 +8,7 @@ console.log('My javascript is being read.');
 //these are variables for function use.
 let temp = 31;
 let speed = 5;
-let condition ="clear";
+let condition ="snow";
 buildWC(speed, temp);
 
 let direction = "sW";
@@ -137,7 +137,7 @@ function windDial(direction){
 
   function convertMetersToFeet(meter){
    let feet = meter*3.281;
-   feet= Math.floor(feet);
+   feet= Math.round(feet);
    console.log(feet)
    return feet;
    
