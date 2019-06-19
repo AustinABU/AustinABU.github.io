@@ -81,6 +81,23 @@ transform: rotate(45deg)
 .nw{
     transform: rotate(315deg)
 }  
+ /* Background pictures for summary */
+ .clear {
+    background-image: url("/weather/images/clear_small.jpg");
+   }
+   .rain {
+    background-image: url("/weather/images/rain_small.jpg");
+   }
+   .snow {
+    background-image: url("/weather/images/snow_small.jpg");
+   }
+   .fog {
+    background-image: url("/weather/images/fog_small.jpg");
+   }
+   .clouds {
+    background-image: url("/weather/images/clouds_small.jpg");
+   }
+
 
 .containers {border:2px solid black}
 #dial {
