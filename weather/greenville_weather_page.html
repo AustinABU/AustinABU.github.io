@@ -3,9 +3,9 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="description" content="This is a weather page for Franklin Idaho">
+    <meta name="description" content="This is a weather page for Greenville Idaho">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Franklin, ID | Weather Site</title>
+    <title id = "page-title">| Weather Site</title>
     <link rel="stylesheet" type="text/css" href="/weather/css/screen.css" media="screen">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
@@ -34,14 +34,17 @@
         <ul id="navlist">
             <li>Current</li>
             <li>Search</li>
-            <li id="city-navigation">Franklin</li>
-            <li id="district-navigation"><a href="greenville_weather_page.html" alt="franklin weather">Greenville</a></li>
+            <li id="city-navigation"><a href="franklin-weather-page.html" alt="franklin weather">Franklin</a></li>
+            <li id="district-navigation">Greenville</li>
         </ul>
     </nav>
+
+
+    <section id="status">Please be patient while I get your weather information.</section>
     <main id="main-content" class="hide"> ... </main>
-    
+
         <section>
-            <h2 id="city-section1">Franklin, Idaho</h2>
+            <h2 id="city-section1">, Idaho</h2>
 
             <dl id="info">
                 <dt><b>Zip:</b>
@@ -61,10 +64,10 @@
 
             <section id="temperature" class="containers">
                 <p class="text">Temperature</p>
-                <p><span id="tem1">40&deg;F</span></p>
+                <p><span id="tem1">40F</span></p>
                 <span id="stemps">
-                    <p><span id="tem2">64&deg;F</span></p>
-                    <p><span id="tem3">41&deg;F</span></p>
+                    <p><span id="tem2">64F</span></p>
+                    <p><span id="tem3">41F</span></p>
                 </span>
                 <p id="feels-like">Feels like <span id="feelTemp"></span>°F</p>
             </section>
@@ -73,12 +76,12 @@
                 <p id="ivalue">2mph</p>
                 <!-- <img id = "dial" class= "ne" src="./images/wind-pointer.png" alt="wind-pointer"> -->
                 <div id="dial" class="ne"></div>
-                <p><b>direction:</b><span id="wind-direction">SW</span>></p>
+                <p><b>direction:</b><span id="wind-direction">SW</span></p>
                 <p><b>Gust:</b><span id="gust-speed">10-12 </span>mph</p>
 
             </section>
             <section id="condition" class="containers">
-                <h2 class="text">Clear</h2>
+                <h2 id= "summary" class="text">Clear</h2>
                 <picture>
                     <source srcset="./images/rain_large.jpg" media="(min-width: 750px)">
                     <source srcset="./images/rain_small.jpg" media="(max-width: 750px)">
@@ -115,7 +118,8 @@
         <p id="copyrite">&copy; Austin Abhulimen, 5/3/2019</p>
     </footer>
     // Weather Site JavaScript Functions
-    <script src="/weather/js/functions.js"></script>
+    <script src="js/functions.js"></script>
+    <script src="js/localdata.js"></script>
 </body>
 
 </html>

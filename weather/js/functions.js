@@ -6,13 +6,13 @@ console.log('My javascript is being read.');
 //this function will calculate a windchill temperature.
 
 //these are variables for function use.
-let temp = 31;
-let speed = 5;
-let condition ="snow";
-buildWC(speed, temp);
+// let temp = 31;
+// let speed = 5;
+// let condition ="snow";
+// buildWC(speed, temp);
 
-let direction = "sW";
-windDial(direction);
+// let direction = "sW";
+// windDial(direction);
 
 function buildWC(speed, temp) {
  let feelTemp = document.getElementById('feelTemp');
@@ -82,7 +82,7 @@ function windDial(direction){
    
    function getCondition(condition)  {
       console.log(condition)
-      if(condition.includes("rain")) {
+      if(condition.includes("Thunderstorms")) {
           return "rain";
       }
 
@@ -103,9 +103,9 @@ function windDial(direction){
 
    }
 
-  let newcondition = getCondition(condition);
-  console.log(newcondition);
-  ChangeSummaryImage(newcondition);
+  // let newcondition = getCondition(condition);
+  // console.log(newcondition);
+  // ChangeSummaryImage(newcondition);
 
   function ChangeSummaryImage(newcondition){
     let image = document.getElementById("bg-image");
@@ -130,9 +130,9 @@ function windDial(direction){
        
      
 }
- var elevation = document.getElementById("elevation");
+//  var elevation = document.getElementById("elevation");
  
- console.log(elevation);
+//  console.log(elevation);
  
 
   function convertMetersToFeet(meter){
@@ -146,8 +146,41 @@ function windDial(direction){
 
   elevation.innerHTML = convertMetersToFeet(elevation.innerHTML);
 
-
-    
-    
 }
+
+
+
+
+// Get the next hour based on the current time
+let date = new Date(); 
+let nextHour = date.getHours() + 1;
+
+//this function will convert and format hours to a 12 hour format.
+// Convert, Format time to 12 hour format
+function format_time(hour) {
+  if(hour > 23){ 
+   hour -= 24; 
+  } 
+  let amPM = (hour > 11) ? "pm" : "am"; 
+  if(hour > 12) { 
+   hour -= 12; 
+  } 
+  if(hour == 0) { 
+   hour = "12"; 
+  } 
+  return hour + amPM;
+ }
+
+
+
+ // Build the hourly temperature list
+function buildHourlyData(nextHour,hourlyTemps) {
+  let hourlyListItems = '<li>' + format_time(nextHour) + ': ' + hourlyTemps[0] + '&deg;F</li>';
+   // Build the remaining list items using a for loop
+   for (let i = 1, x = hourlyTemps.length; i < x; i++) {
+    hourlyListItems += '<li>' + format_time(nextHour+i) + ': ' + hourlyTemps[i] + '&deg;F</li>';
+  }
+  console.log('HourlyList is: ' +hourlyListItems);
+  return hourlyListItems;
+ }
 

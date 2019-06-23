@@ -21,6 +21,10 @@
  @import url('https://fonts.googleapis.com/css?family=Sansita');
  
 
+ .hide{
+    display: none;
+  }
+
  html {
     box-sizing: border-box;
     }
@@ -157,7 +161,7 @@ background-size: cover;
 
 }
 .text{
-    font-size: 7em;
+    font-size: 4vw;
 }
 #tem1{
     font-size:200px;
@@ -192,6 +196,11 @@ background-size: cover;
 #hourly{
     list-style-type:none; 
      display:flex;
+ }
+
+ #hourly li{
+    white-space: nowrap;
+    
  }
 footer{
     width:100%;
