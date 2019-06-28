@@ -1,19 +1,31 @@
 "use strict";
-
-
-
-
-
 //To get values from webpage.
 let pageNav = document.getElementById('page-nav');
 let statusContainer = document.getElementById('status');
 let contentContainer = document.getElementById('main-content');
+//let hourlylist = documment.getElementById("hourlyData");
+
+pageNav.addEventListener("click",function(evt){
+let cityName = evt.target.innerHTML;
+console.log(cityName);
+
+//only check for city names
+switch (cityName) {
+  case "Franklin":
+    case "Greenville":
+        case "Springfield":
+      evt.preventDefault();
+    break;
+
+ }
+
+
+
 let weatherURL ="js/weather.json";
+//fetchData(weatherURL);
 
-fetchData(weatherURL);
-
-function fetchData(weatherURL){
-  let cityName = 'Greenville'; // The data we want from the weather.json file
+//function fetchData(weatherURL){
+//  let cityName = 'Greenville'; // The data we want from the weather.json file
   fetch(weatherURL)
   .then(function(response) {
   if(response.ok){
@@ -137,6 +149,9 @@ function fetchData(weatherURL){
     // Elevation
     let elevationEl = document.getElementById("elevation");
     elevationEl.innerHTML=elevation;
+    // precipitation
+    let precipEl = document.getElementById("precip");
+    precipEl.innerHTML=precip;
     // Location
     let locationEl= document.getElementById("location");
     locationEl.innerHTML= longitude+" "+latitude;
@@ -166,4 +181,5 @@ function fetchData(weatherURL){
   console.log('There was a fetch problem: ', error.message);
   statusContainer.innerHTML = 'Sorry, the data could not be processed.';
   })
-}
+//} ends function
+})//ends the event listener. 
