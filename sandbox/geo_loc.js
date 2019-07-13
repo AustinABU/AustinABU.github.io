@@ -16,7 +16,7 @@ getGeoLocation();
 
 //the function will get the current location by longitude and latitude
 
-function getGeoLocation() {
+//function getGeoLocation() {
     const status = document.getElementById('status');
     status.innerHTML = 'Getting Location...';
     if (navigator.geolocation) {
@@ -41,7 +41,7 @@ function getGeoLocation() {
       
 
       // Gets location information from the NWS API
-function getLocation(locale) {
+//function getLocation(locale) {
     const URL = "https://api.weather.gov/points/" + locale; 
     // NWS User-Agent header (built above) will be the second parameter 
     fetch(URL, idHeader) 
@@ -72,7 +72,7 @@ function getLocation(locale) {
 
 
    // Gets weather station list and the nearest weather station ID from the NWS API
-function getStationId(stationsURL) { 
+//function getStationId(stationsURL) { 
     // NWS User-Agent header (built above) will be the second parameter 
     fetch(stationsURL, idHeader) 
     .then(function(response){
@@ -105,7 +105,7 @@ function getStationId(stationsURL) {
 
 
 // Gets current weather information for a specific weather station from the NWS API
-function getWeather(stationId) { 
+//function getWeather(stationId) { 
     // This is the URL for current observation data 
     const URL = 'https://api.weather.gov/stations/' + stationId + '/observations/latest';
     // NWS User-Agent header (built above) will be the second parameter 
@@ -129,3 +129,4 @@ function getWeather(stationId) {
      }) 
     .catch(error => console.log('There was a getWeather error: ', error)) 
    } // end getWeather function
+   >
