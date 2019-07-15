@@ -54,6 +54,8 @@ justify-content:space-around;
 #listA{
 color: red;
 list-style-type:none;
+position: relative;
+left: -64px;
 
 
 }
@@ -111,13 +113,38 @@ align-items:center;
 }
 
 
-@media screen and (min-width: 320px) {
+@media screen and (max-width: 320px) {
 
+#foreground{
+    width: 476px;
+}
+#background-image{
+    width: 481px;
+}
+#page-nav{
+    width: 476px;
+}
 
+#listA{
+    position: relative;
+    left: 28px;
+}
 
+#rocket{
+    position: relative;
+    left: -193px;
+    
+    
+    }
 
+#list{
+    display: flex;
+    flex-direction: column-reverse;
+}
 
-
-
-
+#recipies{
+position: relative;
+bottom: -180px;
+left: 16px;
+}
 }
