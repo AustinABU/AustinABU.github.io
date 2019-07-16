@@ -40,10 +40,12 @@ body{
 
 
 #welcometoacme{
-   padding:0;
-   margin:0;
-   border:0;
-   font-size: 2em;
+    padding: 0px;
+    font-size: 39px;
+    border: 0px;
+    margin: -13px;
+    position: relative;
+    left: 18px;
 }
 #sec2{
 display:flex;
@@ -146,5 +148,9 @@ align-items:center;
 position: relative;
 bottom: -180px;
 left: 16px;
+}
+
+#welcometoacme{
+font-size: 23px;
 }
 }
